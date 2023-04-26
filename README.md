@@ -34,6 +34,7 @@ Mijn plan is om voor SpaceX het logo te animeren. Ik ben tot dit logo gekomen om
 
   ### Je storyboard:
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+[Uploading IMG_6387.HEIC…]()
 
 
   ### Je ambitie: 
