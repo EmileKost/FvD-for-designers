@@ -34,7 +34,7 @@ Het idee is om de drie verschillende fases van een raketlancering van SpaceX na 
 ### Fase 1 - Ontstekingsfase Lancering
 De eerste fase bestaat uit de ontstekingsfase van de raket. Ik heb hiervoor twee animaties gebruikt. De eerste animatie is om de letters te laten trillen, dit om de kracht van de raket na te bootsen. De tweede animatie is waar de ontseking plaatsvindt en de gehele lucht rood, geel en oranje kleurt door de ontsteking.
 
-#### Screen-shake animatie ####
+### Screen-shake animatie ####
 ````
     animation: screen-shake .2s linear;
     animation-iteration-count: 25;
@@ -43,7 +43,7 @@ De eerste fase bestaat uit de ontstekingsfase van de raket. Ik heb hiervoor twee
 ````
 Voor deze animatie heb ik slechts een rotate gebruikt die het <h1> element van links naar rechts laat schudden. Door niet te veel code kwijt te zijn aan het meerdere keren heen en weer laten gaan heb ik gebruik gemaakt van een iteration count van 25 keer zodat de animatie zich meerdere keren snel herhaald.
 
-#### Fire-launch animatie
+### Fire-launch animatie
 
 
 
