@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** Emile Kost
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -20,32 +20,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. -...-
 
 
+# Opdracht 1
+Mijn plan is om voor SpaceX het logo te animeren. Ik ben tot dit logo gekomen omdat ik eerder voor Front end Development 2 de website van SpaceX heb gemaakt. Het lijk mij dan ook leuk om hier mee verder te gaan en hiervoor het logo te animeren. Een andere reden voor mijn keuze is dat er veel mogelijkheden zijn met de identiteit van SpaceX om zo het logo te animeren
 
-## Opdracht 1 plan
-Mijn plan is om voor SpaceX het logo te animeren. Ik ben tot dit logo gekomen omdat ik eerder voor Front end Development de website van SpaceX heb gemaakt. Het lijk mij dan ook leuk om hier mee verder te gaan en hiervoor het logo te animeren. Een andere reden voor mijn keuze is dat er veel mogelijkheden zijn met de identiteit van SpaceX om zo het logo te animeren
+## Identiteit SpaceX
+SpaceX heeft de laatste jaren groote stappen gemaakt op het gebied van efficient ruimtevaart. Het is voor mij dan ook belangrijk dat het logo overkomt als een modern, fris en snel bedrijf. Een heel gedetailleerd voorbeeld van het bedrijf SpaceX is dat zij de eerste zijn geweest in het ontwikkelen van herbruikbare booster raketten, dit kan in de toekomst zorgen een stuk goedkopere ruimtevaart. Het is dan ook de bedoeling om dit te verwerken in mijn animatie.
 
-#### Identiteit van SpaceX
-* Ruimtevaart bedrijf
-* Herbruikbare raket
-* Zelf terugkerende raket
+## Animatie idee
+Het idee is om de drie verschillende fases van een raketlancering van SpaceX na te bootsen met de letter 'a' van het logo. De eerste fase is de lancering van de lancering die vrij langzaam verloopt. Daarna kort na de eerste fase versnelt de raket en verdwijnt in de horizon. De derde fase bestaat uit de identiteit van SpaceX, het terug laten keren van de herbruikbare raket.
 
-<details open>
-  <summary>uitwerken na schetsen idee (voor week 2)</summary>
+## Animatie stap voor stap uitgelegd
 
+### Fase 1 - Ontstekingsfase Lancering
+De eerste fase bestaat uit de ontstekingsfase van de raket. Ik heb hiervoor twee animaties gebruikt. De eerste animatie is om de letters te laten trillen, dit om de kracht van de raket na te bootsen. De tweede animatie is waar de ontseking plaatsvindt en de gehele lucht rood, geel en oranje kleurt door de ontsteking.
 
-  ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
-[Uploading IMG_6387.HEIC…]()
+#### Screen-shake animatie
+````
+    animation: screen-shake .2s linear;
+    animation-iteration-count: 25;
+    animation-delay: 2s;
 
+````
+Voor deze animatie heb ik slechts een rotate gebruikt die het <h1> element van links naar rechts laat schudden. Door niet te veel code kwijt te zijn aan het meerdere keren heen en weer laten gaan heb ik gebruik gemaakt van een iteration count van 25 keer zodat de animatie zich meerdere keren snel herhaald.
 
-  ### Je ambitie: 
-  Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
- 
-</details>
+#### Fire-launch animatie
 
 
 
