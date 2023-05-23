@@ -41,7 +41,7 @@ De eerste fase bestaat uit de ontstekingsfase van de raket. Ik heb hiervoor twee
     animation-delay: 2s;
 
 ````
-Voor deze animatie heb ik slechts een rotate gebruikt die het <h1> element van links naar rechts laat schudden. Door niet te veel code kwijt te zijn aan het meerdere keren heen en weer laten gaan heb ik gebruik gemaakt van een iteration count van 25 keer zodat de animatie zich meerdere keren snel herhaald.
+Voor deze animatie heb ik slechts een rotate gebruikt die het h1 element van links naar rechts laat schudden. Door niet te veel code kwijt te zijn aan het meerdere keren heen en weer laten gaan heb ik gebruik gemaakt van een iteration count van 25 keer zodat de animatie zich meerdere keren snel herhaald.
 
 ### Fire-launch animatie
 
