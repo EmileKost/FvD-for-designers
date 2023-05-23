@@ -1,0 +1,234 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'spacex';
+    src: url('assets/SpaceX.ttf');
+}
+
+@font-face {
+    font-family: 'space';
+    src: url('assets/NeonFuture20Demo-L3jp3.otf');
+}
+
+:root {
+    --light-background: linear-gradient(45deg, #eeeeee, #faf8f9, #ffffff);
+    --dark-background: radial-gradient(circle, rgba(6,3,56,1) 18%, rgba(0,0,0,1) 64%, rgba(13,19,20,1) 100%);
+    --text-lightmode-color: #000000;
+    --text-darkmode-color: #ffffff;
+    --launch-fireball-background: rgb(179, 93, 10);
+    --launch-fireball-gradient: radial-gradient(circle, #ff4800 28%, #ff7900 56%, #ffb600 84%);
+}
+
+body {
+    background: var(--light-background);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+
+h1 {
+    white-space: nowrap;
+    font-family: 'spacex', sans-serif;
+    color: var(--text-lightmode-color);
+    font-size: clamp(1rem, 6vw, 4rem);
+    z-index: 2;
+    animation: screen-shake .2s linear;
+    animation-iteration-count: 25;
+    animation-delay: 2s;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section button {
+    color: var(--text-lightmode-color);
+    z-index: 2;
+    cursor: pointer;
+    width: 90%;
+    max-width: 250px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    font-family: 'space', sans-serif;
+    transition: .5s;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+section button:hover {
+    transform: scale(.95);
+}
+
+/* Shake of h1 animation */
+@keyframes screen-shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(.5deg)
+    }
+    50% {
+        transform: rotate(.5deg)
+    }
+    100% {
+        tranform: rotate(0deg);
+    }
+}
+
+/* Fireball launch div and animation */
+div:first-of-type {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--launch-fireball-gradient);
+    opacity: 0;
+    animation: fire-launch 14s ease-out, fire-landing 9s ease-out;
+    animation-delay: 5s, 23s;
+}
+
+@keyframes fire-launch {
+    0% {
+        opacity: 0;
+    } 
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fire-landing {
+    0% {
+        opacity: 0;
+    } 
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* !! Make sure animation is also responsive !! */
+/* cubic-bezier( 0.87, 0.01, 0.91, 0.67 ) */
+span:nth-of-type(3) {
+    display: inline-block;
+    animation: 
+        fly 7s cubic-bezier(.66,.16,.8,.28) 1 forwards, 
+        land 10s ease-out 1 forwards,
+        twinkle .2s ease-out;
+    animation-delay: 8s, 19s;
+    transform-origin: center bottom;
+}
+
+span {
+    animation: twinkle .5s ease-in-out;
+}
+
+span:nth-of-type(1) {
+    animation-delay: 30.5s;
+}
+
+span:nth-of-type(2) {
+    animation-delay: 30.7s;
+}
+
+span:nth-of-type(3) {
+    animation-delay: 7s, 18s, 30.9s;
+}
+
+span:nth-of-type(4) {
+    animation-delay: 31.1s;
+}
+
+span:nth-of-type(5) {
+    animation-delay: 31.3s;
+}
+
+span:nth-of-type(6) {
+    animation-delay: 31.5s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Take off and flying animation */
+@keyframes fly  {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(300px, -800px) rotate(30deg) scale(.2);
+    }
+}
+
+@keyframes land {
+    0% {
+        transform: translate(-350px, -700px) rotate(-30deg) scale(.2);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+/* Make sure media queries are at the bottom of the file */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-background);
+    }
+    h1 {
+        color: var(--text-darkmode-color);
+    }
+    button {
+        color: var(--text-darkmode-color);
+        border: 1px solid #fff;
+    }
+}
+
+@media (prefers-reduces-motion) {
+    h1 {
+        color: black;
+    }
+}
+/* have to include content: '' for ::before */
