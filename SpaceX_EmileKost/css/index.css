@@ -26,6 +26,16 @@
 
 body {
     background: var(--light-background);
+    position: relative;
+}
+
+p {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    font-family: 'montserrat', sans-serif;
+    font-size: clamp(10px, 12px, 100%);
 }
 
 main {
@@ -51,7 +61,7 @@ h1 {
     position: relative;
 }
 
-section {
+section:nth-of-type(1) {
     width: 100%;
     padding: 40px;
     position: absolute;
@@ -99,7 +109,7 @@ section button:hover {
         transform: rotate(.5deg)
     }
     100% {
-        tranform: rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -151,34 +161,36 @@ span:nth-of-type(3) {
         twinkle .2s ease-out;
     animation-delay: 8s, 19s;
     transform-origin: center bottom;
+    position: relative;
 }
 
+
 span {
-    animation: twinkle .5s ease-in-out;
+    animation: twinkle .3s ease-in-out;
 }
 
 span:nth-of-type(1) {
-    animation-delay: 30.5s;
+    animation-delay: 30s;
 }
 
 span:nth-of-type(2) {
-    animation-delay: 30.7s;
+    animation-delay: 30.15s;
 }
 
 span:nth-of-type(3) {
-    animation-delay: 7s, 18s, 30.9s;
+    animation-delay: 7s, 18s, 30.3s;
 }
 
 span:nth-of-type(4) {
-    animation-delay: 31.1s;
+    animation-delay: 30.45s;
 }
 
 span:nth-of-type(5) {
-    animation-delay: 31.3s;
+    animation-delay: 30.6s;
 }
 
 span:nth-of-type(6) {
-    animation-delay: 31.5s;
+    animation-delay: 30.75s;
 }
 
 @keyframes twinkle {
@@ -199,9 +211,10 @@ span:nth-of-type(6) {
         transform: translate(0);
     }
     100% {
-        transform: translate(300px, -800px) rotate(30deg) scale(.2);
+        transform: translate(400px, -800px) rotate(45deg) scale(.2);
     }
 }
+
 
 @keyframes land {
     0% {
@@ -220,15 +233,23 @@ span:nth-of-type(6) {
     h1 {
         color: var(--text-darkmode-color);
     }
-    button {
+    section button {
         color: var(--text-darkmode-color);
         border: 1px solid #fff;
     }
 }
 
-@media (prefers-reduces-motion) {
-    h1 {
-        color: black;
-    }
+@media screen and (prefers-reduced-motion: reduce) {
+   h1 {
+    animation: none;
+   }
+   span {
+    animation: none, none;
+   }
+   span:nth-of-type(3) {
+    animation: none, none;
+   }
+   div:first-of-type {
+    animation: none, none;
+   }
 }
-/* have to include content: '' for ::before */
