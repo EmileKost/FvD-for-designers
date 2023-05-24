@@ -122,6 +122,9 @@ Ik vind dat ik bij deze opdracht op een leuke manier veel heb kunnen experimente
 * prefers-color-scheme gebruikt
 * prefers-reduces-motion gebruikt
 
+## Extra
+Ik heb nog een extra feature toegevoegd die de huidige weerstomstandigheden laat zien bij de SpaceX launch site in Texas. Ik maak hier gebruik van een weather API.
+
 ## Wishlist
 * ::before en ::after (kon geen passende interactie hierbij vinden)
 * Meer tijd voor afstelling van de natuurlijke curve in take-off fase
