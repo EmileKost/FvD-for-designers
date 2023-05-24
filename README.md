@@ -21,6 +21,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 # Opdracht 1
+
+#### Live link opdracht 1: https://live-spacex-logo.vercel.app/
+
 Mijn plan is om voor SpaceX het logo te animeren. Ik ben tot dit logo gekomen omdat ik eerder voor Front end Development 2 de website van SpaceX heb gemaakt. Het lijk mij dan ook leuk om hier mee verder te gaan en hiervoor het logo te animeren. Een andere reden voor mijn keuze is dat er veel mogelijkheden zijn met de identiteit van SpaceX om zo het logo te animeren
 
 ## Identiteit SpaceX
