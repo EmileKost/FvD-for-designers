@@ -34,7 +34,7 @@ Het idee is om de drie verschillende fases van een raketlancering van SpaceX na 
 ### Fase 1 - Ontstekingsfase Lancering
 De eerste fase bestaat uit de ontstekingsfase van de raket. Ik heb hiervoor twee animaties gebruikt. De eerste animatie is om de letters te laten trillen, dit om de kracht van de raket na te bootsen. De tweede animatie is waar de ontseking plaatsvindt en de gehele lucht rood, geel en oranje kleurt door de ontsteking.
 
-### Screen-shake animatie
+#### Screen-shake animatie
 ````
     animation: screen-shake .2s linear;
     animation-iteration-count: 25;
@@ -43,7 +43,52 @@ De eerste fase bestaat uit de ontstekingsfase van de raket. Ik heb hiervoor twee
 ````
 Voor deze animatie heb ik slechts een rotate gebruikt die het h1 element van links naar rechts laat schudden. Door niet te veel code kwijt te zijn aan het meerdere keren heen en weer laten gaan heb ik gebruik gemaakt van een iteration count van 25 keer zodat de animatie zich meerdere keren snel herhaald.
 
-### Fire-launch animatie
+#### Fire-launch animatie
+````
+@keyframes fire-launch {
+    0% {
+        opacity: 0;
+    } 
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+````
+Voor de launch animatie wilde ik de kracht van een raket nabootsen. Ik heb hiervoor een container en een radial gradient gebruikt die bij de animatie fel over het gehele scherm zichtbaar is. Met ease-out dooft het vuur langzaam aan het eind van de animatie.
+
+### Fase 2 - Takeoff
+````
+    animation: 
+        fly 7s cubic-bezier(.66,.16,.8,.28) 1 forwards, 
+       
+    @keyframes fly  {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(300px, -800px) rotate(30deg) scale(.2);
+    }
+}
+````
+Bij fase twee moet de letter a daadwerkelijk als een raket opstijgen. Om dit zo realistisch mogelijk te maken heb ik gebruik gemaakt van cubic-bezier. Dit om zo een vertraging toe te voegen aan het begin van de animatie. Om de raket in de horizon te laten verdwijnen heb ik scale() gebruikt, die het laat lijken alsof de raket steeds meer in de verte verdwijnt.
+
+### Fase 3 - Landing
+````
+  land 10s ease-out 1 forwards,
+  
+  @keyframes land {
+    0% {
+        transform: translate(350px, -700px) rotate(30deg) scale(.2);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+````
+Bij de derde fase keert de raket weer terug naar de bais. Ik heb hiervoor een ease-out gebruikt zodat de raket op het laatste moment zachtjes landt.
 
 
 
