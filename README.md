@@ -88,9 +88,43 @@ Bij fase twee moet de letter a daadwerkelijk als een raket opstijgen. Om dit zo 
     }
 }
 ````
-Bij de derde fase keert de raket weer terug naar de bais. Ik heb hiervoor een ease-out gebruikt zodat de raket op het laatste moment zachtjes landt.
+Bij de derde fase keert de raket weer terug naar de bais. Ik heb hiervoor een ease-out gebruikt zodat de raket op het laatste moment zachtjes landt. Daarnaast heb ik '1 forwards' gebruikt zodat na het eind van de animatie het object op de gewenste plaatst blijft gepositioneerd.
 
+### Extra - Glinstering over letters
+````
+span {
+    animation: twinkle .1s ease-in-out;
+}
 
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+````
+Als extra heb ik een glinstering aan de letters toegevoegd die na de laatste fase van de raketlancering nog afspeelt. Het is hierbij de bedoeling dat de nadruk moet worden gelegd op SpaceX en de snelle en moderne groei van dit bedrijf. Elke span kreeg dezelfde animatie. Om het verloop goed te laten worden heb ik op elke span een andere delay gezet zodat deze mooi in elkaar overlopen.
+
+## Reflectie
+Ik vind dat ik bij deze opdracht op een leuke manier veel heb kunnen experimenteren met de moderne  technieken van CSS. Ik dacht stiekem dat ik ondertussen wel bijna alles wist van CSS, en heb daarom bij andere projecten veel de focus gelegd bij Javascript. Dit was echter totaal niet het geval, deze opdracht heeft mij weer op een leuke manier aan het denken gezet over CSS. Ik ben dan nu ook weer een stuk gemotiveerder om te blijven doorleren over CSS. Want ik merk dat er steeds minder client-side Javascript nodig is om complexe animaties en interacties te laten plaatsvinden. Ik vind dat ik dit project tot een mooi concept ben gekomen en dat ik veel heb geleerd over complext CSS technieken. Wat ik het aller lastigst vond was de natuurlijke curve en rotation verwerken in de take-off animatie. Ik had graag nog iets meer tijd gehad om deze betere af te stellen.
+
+### Wat heb ik geleerd en gedaan?
+* Opfrisser linear en radial gradients
+* Gebruik gemaakt van custom properties
+* Voor het eerst met clamp() gewerkt voor een efficiente manier van responsive design
+* Gewerkt met cubic-bezier om zo een natuurlijk proces na te bootsen
+* Geëxperimenteerd met keyframes en meerde transform properties
+* prefers-color-scheme gebruikt
+* prefers-reduces-motion gebruikt
+
+## Wishlist
+* ::before en ::after (kon geen passende interactie hierbij vinden)
+* Meer tijd voor afstelling van de natuurlijke curve in take-off fase
 
 ## Opdracht 1 reflectie
 
